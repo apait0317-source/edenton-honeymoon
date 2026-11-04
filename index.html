@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edenton Honeymoon Weekend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      .x-tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; margin-bottom: 28px; border-radius: var(--r-pill); background: var(--fill-tertiary); }
+      .x-tabs button { min-height: var(--tap); min-width: 72px; padding: 0 18px; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--text-secondary); font: var(--type-label); cursor: pointer; transition: background var(--dur-quick) var(--ease-out), color var(--dur-quick) var(--ease-out); }
+      .x-tabs button small { display: block; font: var(--type-caption); }
+      .x-tabs button[aria-selected="true"] { background: var(--fill-primary); color: var(--text-primary-on); }
+      .x-tabs button:focus-visible, .x-switch:focus-visible, .x-tick:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 2px; }
+      .x-panel[hidden] { display: none; }
+      .x-panel > h3 { font: var(--type-heading); margin-bottom: 4px; }
+      .x-panel > .x-panel__sub { color: var(--text-secondary); margin-bottom: 24px; }
+      .x-panel > .aside { margin-top: 28px; }
+      .x-map { margin-top: 6px; font: var(--type-small); }
+      .x-stop-img { display: block; width: 100%; max-width: 420px; margin-top: 12px; border-radius: var(--r-m); }
+      .x-tick { cursor: pointer; }
+      .x-switch { position: relative; flex: none; width: 52px; height: var(--tap); padding: 0; border: 0; border-radius: var(--r-pill); background: transparent; cursor: pointer; }
+      .x-switch::before { content: ""; position: absolute; left: 0; top: 6px; width: 52px; height: 32px; border-radius: var(--r-pill); background: var(--stroke-primary); transition: background var(--dur-quick) var(--ease-out); }
+      .x-switch::after { content: ""; position: absolute; top: 9px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: var(--fill-primary-on); box-shadow: var(--hark-shadow); transition: transform var(--dur-quick) var(--ease-out); }
+      .x-switch[aria-checked="true"]::before { background: var(--fill-primary); }
+      .x-switch[aria-checked="true"]::after { transform: translateX(20px); }
+      .x-switch-wrap { display: flex; align-items: center; gap: 12px; font-weight: var(--weight-bold); color: var(--text-primary); }
+      .x-live { font-weight: var(--weight-bold); color: var(--text-primary); }
+    </style>
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="nav glass" data-auto></header>
+      <main class="main">
+        <section class="hero">
+          <img class="hero__img" src="hero_edenton.jpg" alt="The Roanoke River Lighthouse on Edenton's waterfront at sunset" />
+          <div class="hero__copy">
+            <p class="hero__eyebrow">Honeymoon · 4 days · for Aaron</p>
+            <h1>Edenton, Nov 12–15, 2026</h1>
+            <p class="hero__sub">A honeymoon weekend for Aaron &amp; Kimberly in North Carolina's colonial capital.</p>
+            <p class="hero__meta">Kimberly knows it's Edenton · the inn is a surprise</p>
+          </div>
+          <aside class="callout" aria-label="Next step">
+            <p class="callout__head"><span class="hark-mark" data-size="16"></span> Next step</p>
+            <p class="callout__lead">
+              <strong>Call the inn at (252) 482-3641 to confirm Friday's 7 PM dinner at The Table.</strong> It is requested but not confirmed.
+            </p>
+            <a class="btn" href="tel:+12524823641">Call the inn</a>
+          </aside>
+          <p class="hero__credit">The 1886 Roanoke River Lighthouse at sunset</p>
+        </section>
+
+        <section class="section" id="glance" data-nav="At a glance">
+          <div class="head">
+            <p class="head__eyebrow">Thu Nov 12 – Sun Nov 15, 2026</p>
+            <h2>One canopy-bed suite, four days, everything walkable.</h2>
+          </div>
+          <div class="cards">
+            <div>
+              <h3>Stay <span class="chip">Booked</span></h3>
+              <ul>
+                <li>Inner Banks Inn, Suite #21 Queen Anne (canopy bed)</li>
+                <li>103 E Albemarle St, Edenton NC 27932 · <a class="link" href="tel:+12524823641">(252) 482-3641</a></li>
+                <li>Confirmation <b>E76WV977</b></li>
+                <li>$401.74 due at the inn <small class="fineprint">($401.75 deposit paid; total $803.49)</small></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Times</h3>
+              <ul>
+                <li>Check-in 3–7 PM; early or late arrival by prior notice</li>
+                <li>Checkout 11 AM</li>
+                <li>Breakfast included daily, 7:30–9:15 AM</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Weather</h3>
+              <p class="quote">Bring layers for sunset.</p>
+              <ul>
+                <li>Typically mid-60s °F by day, mid-40s at night</li>
+                <li>Breezy off the Albemarle Sound</li>
+                <li>Sunset about 5:00 PM</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Dining notes</h3>
+              <ul>
+                <li>No alcohol: ask servers for zero-proof drinks. No restaurant publishes a mocktail menu.</li>
+                <li>Kimberly eats no seafood; non-seafood picks are noted at each stop.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="days" data-nav="Day by day">
+          <div class="head">
+            <h2>Mansions, sunsets and slow breakfasts, day by day.</h2>
+            <p class="head__sub">Pick a day. Every stop shows its booking status and a map link.</p>
+          </div>
+          <div class="x-tabs" role="tablist" aria-label="Trip day">
+            <button role="tab" id="tab-thu" aria-controls="day-thu" aria-selected="true">Thu<small>Nov 12</small></button>
+            <button role="tab" id="tab-fri" aria-controls="day-fri" aria-selected="false" tabindex="-1">Fri<small>Nov 13</small></button>
+            <button role="tab" id="tab-sat" aria-controls="day-sat" aria-selected="false" tabindex="-1">Sat<small>Nov 14</small></button>
+            <button role="tab" id="tab-sun" aria-controls="day-sun" aria-selected="false" tabindex="-1">Sun<small>Nov 15</small></button>
+          </div>
+
+          <div class="x-panel" role="tabpanel" id="day-thu" aria-labelledby="tab-thu">
+            <h3>Arrive &amp; first sunset</h3>
+            <p class="x-panel__sub">Thursday, November 12</p>
+            <ol class="timeline">
+              <li>
+                <p class="timeline__when">12:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Arrive downtown Edenton</b>, about 1 hr 50 min from Rocky Mount. Park near the inn.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=103+E+Albemarle+St+Edenton+NC+27932" target="_blank" rel="noopener">Map</a></p>
+                </div>
+              </li>
+              <li>
+                <p class="timeline__when">1:00 PM</p>
+                <div class="timeline__what">
+                  <p><b>Lunch at Downtown Roots</b>: farm-to-table sandwiches and salads. Thu 11 AM–6 PM.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Downtown+Roots/@36.0574633,-76.6116458,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f3ceb0db5d7:0x6ae6a2455b819163!8m2!3d36.0574633!4d-76.6090709!16s%2Fg%2F11vkfcyksd" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">2:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Vintage trolley tour</b> of the historic district <span class="pill">50 min</span> <span class="pill">$12.50 each</span></p>
+                  <p>Departs the Penelope Barker House Welcome Center (open Thu 10–4). Book at <a class="link" href="tel:+12524825800">(252) 482-5800</a>. Thursday is safer than Saturday, when private rentals take the trolley.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Penelope+Barker+House+Welcome+Center/@36.0561509,-76.6121178,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8fbb07b7ed11:0x4d881ddf22c3b811!8m2!3d36.0561509!4d-76.6095429!16s%2Fm%2F011x5ymz" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip chip--solid" data-book="trolley">Needs booking</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">3:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Check in to the Queen Anne Suite</b>, Inner Banks Inn.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Booked</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">4:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Sunset walk</b> along the waterfront to the 1886 Roanoke River Lighthouse. The sun sets around 5:00.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Roanoke+River+Lighthouse+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">6:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Dinner at Carrozza</b>, cozy Italian, a 3-minute walk. Thu 4–8 PM. <span class="pill">Pasta $15–27</span> <span class="pill">Chicken parm $33</span></p>
+                  <p>Skip dishes braised in red wine (pot roast, short rib), or ask. Call ahead to reserve.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Carrozza/@36.0594209,-76.6115001,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8fc1301af675:0x611ed1cf8fd576ac!8m2!3d36.0594209!4d-76.6089252!16s%2Fg%2F11x16yfrwp" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip chip--solid" data-book="carrozza">Needs booking</span></p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="x-panel" role="tabpanel" id="day-fri" aria-labelledby="tab-fri" hidden>
+            <h3>Mansions &amp; the big dinner</h3>
+            <p class="x-panel__sub">Friday, November 13</p>
+            <ol class="timeline">
+              <li>
+                <p class="timeline__when">8:00 AM</p>
+                <div class="timeline__what">
+                  <p><b>Three-course breakfast at the inn.</b></p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Booked</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">9:15 AM</p>
+                <div class="timeline__what">
+                  <p><b>Drive to Windsor</b>, about 40 min.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Edenton+NC&amp;destination=Historic+Hope+Windsor+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+              </li>
+              <li>
+                <p class="timeline__when">10:00 AM</p>
+                <div class="timeline__what">
+                  <p><b>Historic Hope Plantation</b>: David Stone's 1803 Federal-style governor's mansion, with original furnishings. <span class="pill">90-min guided tour</span> <span class="pill">$15 each</span></p>
+                  <p>Tours Mon/Wed/Fri at 10, 12 and 2; Friday is the only trip day it runs. Book via the site's FareHarbor link and call <a class="link" href="tel:+12527943140">(252) 794-3140</a> to confirm Nov 13 tours. Google Maps: Fri 10 AM–4 PM.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Historic+Hope/@36.032261,-77.0220352,17z/data=!3m1!4b1!4m6!3m5!1s0x89afaf83c9994b17:0xd2bb751618775e60!8m2!3d36.032261!4d-77.0194603!16s%2Fg%2F1pxyzs26x" target="_blank" rel="noopener">Map</a></p>
+                  <img class="x-stop-img" src="hope.jpg" alt="The 1803 Hope Plantation mansion" />
+                </div>
+                <p><span class="chip chip--solid" data-book="hope">Needs booking</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">11:45 AM</p>
+                <div class="timeline__what">
+                  <p><b>Lunch at Rachel's Bakery &amp; Cafe</b>, Windsor. Fri 7:30 AM–3:30 PM.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Rachel's+Bakery+and+Cafe/@35.9982119,-76.9490342,17z/data=!3m1!4b1!4m6!3m5!1s0x89afa587b1a89d8d:0x3d669c443fa06c70!8m2!3d35.9982119!4d-76.9464593!16s%2Fg%2F11q1qtz3lk" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">1:15 PM</p>
+                <div class="timeline__what">
+                  <p><b>Drive back to Edenton.</b></p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Windsor+NC&amp;destination=Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+              </li>
+              <li>
+                <p class="timeline__when">2:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Cupola House (1758)</b>, the finest colonial interior in town. <span class="pill">45 min</span> <span class="pill">$12.50 each</span></p>
+                  <p>Tours Fri 11:30, 12:30 and 2:30. Buy tickets at the Barker House, or call.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Cupola+House+Association/@36.057587,-76.6121693,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8fba5386f91d:0x97e31fe8ed862cf7!8m2!3d36.057587!4d-76.6095944!16s%2Fm%2F03qhv6l" target="_blank" rel="noopener">Map</a></p>
+                  <img class="x-stop-img" src="cupola.jpg" alt="The Cupola House's 1758 paneled interior with its fireplace" />
+                </div>
+                <p><span class="chip chip--solid" data-book="cupola">Needs booking</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">4:00 PM</p>
+                <div class="timeline__what">
+                  <p><b>Borrow the inn's bikes</b> and ride the waterfront for sunset (around 5:00).</p>
+                  <p>Option: a tandem kayak from the town harbor, $7/hr; call ahead.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Edenton+Town+Harbor+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">5:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Chowan Arts Council artist reception</b> for Chet McAteer, 5:30–7, a two-minute walk from the inn. Free.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Chowan+Arts+Council+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">7:00 PM</p>
+                <div class="timeline__what">
+                  <p><b>Dinner at The Table at Inner Banks</b>. <span class="pill">Chef's Choice $75 per person + tax and tip</span></p>
+                  <p>No-seafood request noted for Kimberly. Not confirmed yet: call <a class="link" href="tel:+12524823641">(252) 482-3641</a>.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip chip--solid" data-book="table">Requested</span></p>
+              </li>
+            </ol>
+          </div>
+          <div class="x-panel" role="tabpanel" id="day-sat" aria-labelledby="tab-sat" hidden>
+            <h3>Old Edenton &amp; Christmas Open House</h3>
+            <p class="x-panel__sub">Saturday, November 14</p>
+            <ol class="timeline">
+              <li>
+                <p class="timeline__when">8:00 AM</p>
+                <div class="timeline__what">
+                  <p><b>Breakfast at the inn.</b></p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Booked</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">9:00 AM</p>
+                <div class="timeline__what">
+                  <p><b>Edenton Farmers Market</b>, 200 N Broad St, 9 AM–1 PM. Free.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=200+N+Broad+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">10:00 AM</p>
+                <div class="timeline__what">
+                  <p><b>Main Street Edenton Christmas Open House</b>, 10 AM–5 PM downtown. Antique hunting for Kimberly:</p>
+                  <ul>
+                    <li>Broad Street Bazaar, Sat 10:30–5 · <a class="link" href="https://www.google.com/maps/place/Broad+Street+Bazaar/@36.0584871,-76.611423,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f0f0649bf1b:0xf4a1856d4650486c!8m2!3d36.0584871!4d-76.6088481!16s%2Fg%2F11v0lv7vp5" target="_blank" rel="noopener">Map</a></li>
+                    <li>A Still Life, Sat 10–5 · <a class="link" href="https://www.google.com/maps/place/A+Still+Life/@36.0593093,-76.6117361,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f19cfb70875:0xc7c982c02fbbe35a!8m2!3d36.0593093!4d-76.6091612!16s%2Fg%2F11rv92cbg8" target="_blank" rel="noopener">Map</a></li>
+                  </ul>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">11:30 AM</p>
+                <div class="timeline__what">
+                  <p><b>Historic Edenton docent tours</b>: the 1767 Chowan County Courthouse (oldest colonial courthouse still in use, with its upstairs ballroom), the Roanoke River Lighthouse interior and the Iredell House. <span class="pill">About $5 + tax per adult</span></p>
+                  <p>Ask about the veteran/military rate (about $4). Start at the Barker House Welcome Center; confirm November tour times at <a class="link" href="tel:+12526325020">(252) 632-5020</a>.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Penelope+Barker+House+Welcome+Center/@36.0561509,-76.6121178,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8fbb07b7ed11:0x4d881ddf22c3b811!8m2!3d36.0561509!4d-76.6095429!16s%2Fm%2F011x5ymz" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip chip--solid" data-book="docent">Needs booking</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">1:00 PM</p>
+                <div class="timeline__what">
+                  <p><b>Lunch at Downtown Roots</b> (Sat 11–6), or coffee at Edenton Coffee House (Sat 7–5).</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/Downtown+Roots/@36.0574633,-76.6116458,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f3ceb0db5d7:0x6ae6a2455b819163!8m2!3d36.0574633!4d-76.6090709!16s%2Fg%2F11vkfcyksd" target="_blank" rel="noopener">Downtown Roots map</a> · <a class="link" href="https://www.google.com/maps/place/Edenton+Coffee+House/@36.0588126,-76.6116789,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8fba8a72c3c3:0xfe4c559014050604!8m2!3d36.0588126!4d-76.609104!16s%2Fg%2F1tqtyrd3" target="_blank" rel="noopener">Coffee House map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">2:30 PM</p>
+                <div class="timeline__what">
+                  <p><b>Downtime at the suite</b>, the ideal slot for the in-room <a class="link" href="#touches">couples massage</a>.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Booked</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">4:15 PM</p>
+                <div class="timeline__what">
+                  <p><b>Golden-hour couples photo session</b> at the lighthouse, an optional <a class="link" href="#touches">special touch</a>.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Roanoke+River+Lighthouse+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip" data-touch-chip="photo">Needs booking</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">7:00 PM</p>
+                <div class="timeline__what">
+                  <p><b>Dinner at The Herringbone</b>, in a restored waterfront icehouse.</p>
+                  <p>Non-seafood: stuffed acorn squash $26, chicken $29, pork chop $28, steak $44–48. Book online up to 36 hrs ahead or at <a class="link" href="tel:+12523681068">(252) 368-1068</a>.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/The+Herringbone+Edenton/@36.056781,-76.6137438,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f73adbf7507:0x5ae50efc8bd21bdb!8m2!3d36.056781!4d-76.6111689!16s%2Fg%2F11s3t6c8w1" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip chip--solid" data-book="herringbone">Needs booking</span></p>
+              </li>
+            </ol>
+            <div class="aside">
+              <h3>Swap option: Somerset Place and Lake Phelps</h3>
+              <p>Somerset Place State Historic Site, Creswell, about 45 min away: Sat 9–5, tours $5 + tax, last tour by 3:30. The main Collins House is closed for construction. Add Pettigrew State Park's cypress boardwalks and wintering tundra swans on Lake Phelps, with lunch at Black Dirt Coffee Shop &amp; Café in Columbia (Sat 6 AM–5 PM).</p>
+              <div class="links">
+                <a class="btn" href="https://www.google.com/maps/place/Somerset+Place+State+Historic+Site/@35.7894109,-76.4065591,17z/data=!3m1!4b1!4m6!3m5!1s0x89a5810748c19ac3:0xff539b94ab01b778!8m2!3d35.7894109!4d-76.4039842!16zL20vMDNkMjhu" target="_blank" rel="noopener">Somerset Place map</a>
+                <a class="btn" href="https://www.google.com/maps/place/Black+Dirt+Coffee+Shop+%26+Caf%C3%A9/@35.9168723,-76.2567026,17z/data=!3m1!4b1!4m6!3m5!1s0x89a571007bc98b87:0xf8d6533582bd0239!8m2!3d35.9168723!4d-76.2541277!16s%2Fg%2F11wfxb0bsp" target="_blank" rel="noopener">Black Dirt map</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="x-panel" role="tabpanel" id="day-sun" aria-labelledby="tab-sun" hidden>
+            <h3>Slow morning, home</h3>
+            <p class="x-panel__sub">Sunday, November 15</p>
+            <ol class="timeline">
+              <li>
+                <p class="timeline__when">8:30 AM</p>
+                <div class="timeline__what">
+                  <p><b>Breakfast at the inn</b>, or sleep in and skip to brunch.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Booked</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">11:00 AM</p>
+                <div class="timeline__what">
+                  <p><b>Check out.</b></p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Inner+Banks+Inn+103+E+Albemarle+St+Edenton+NC" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Booked</span></p>
+              </li>
+              <li>
+                <p class="timeline__when">11:15 AM</p>
+                <div class="timeline__what">
+                  <p><b>Brunch at The Herringbone</b> (Sat–Sun brunch 10 AM–3:30 PM).</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/The+Herringbone+Edenton/@36.056781,-76.6137438,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f73adbf7507:0x5ae50efc8bd21bdb!8m2!3d36.056781!4d-76.6111689!16s%2Fg%2F11s3t6c8w1" target="_blank" rel="noopener">Map</a></p>
+                </div>
+              </li>
+              <li>
+                <p class="timeline__when">On the way out</p>
+                <div class="timeline__what">
+                  <p><b>Coffee for the road</b> at The Kraken Coffeehouse, Sun 8 AM–7 PM.</p>
+                  <p class="x-map"><a class="link" href="https://www.google.com/maps/place/The+Kraken+Coffeehouse/@36.0592194,-76.6111268,17z/data=!3m1!4b1!4m6!3m5!1s0x89af8f004f91e96f:0x3af6a03033286eaa!8m2!3d36.0592194!4d-76.6085519!16s%2Fg%2F11x8q6kzlx" target="_blank" rel="noopener">Map</a></p>
+                </div>
+                <p><span class="chip">Walk-in</span></p>
+              </li>
+            </ol>
+            <p class="fineprint">Most historic sites, the trolley, Barker House, Cupola House and Edenton Coffee House are closed Sunday.</p>
+          </div>
+        </section>
+
+        <section class="section" id="book" data-nav="To book">
+          <div class="head">
+            <h2>Seven calls lock in the weekend.</h2>
+            <p class="head__sub"><span class="x-live" id="book-count" aria-live="polite">0 of 7 done</span>. Tick each one off as you go.</p>
+          </div>
+          <ul class="checklist" id="booklist">
+            <li data-book="table">
+              <span class="checklist__item">The Table, Fri Nov 13, 7 PM <small>Call the inn at <a class="link" href="tel:+12524823641">(252) 482-3641</a> to confirm, and add any special touches below</small></span><span class="chip chip--solid">Call now</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+            <li data-book="trolley">
+              <span class="checklist__item">Trolley tour, Thu Nov 12, 2:30 PM <small><a class="link" href="tel:+12524825800">(252) 482-5800</a></small></span><span class="chip chip--solid">To book</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+            <li data-book="hope">
+              <span class="checklist__item">Hope Plantation, Fri Nov 13, 10 AM <small>Confirm at <a class="link" href="tel:+12527943140">(252) 794-3140</a>, book via FareHarbor</small></span><span class="chip chip--solid">To book</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+            <li data-book="cupola">
+              <span class="checklist__item">Cupola House, Fri Nov 13, 2:30 PM <small>Tickets at the Barker House</small></span><span class="chip chip--solid">To book</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+            <li data-book="docent">
+              <span class="checklist__item">Historic Edenton docent tours, Sat Nov 14 <small>Confirm times at <a class="link" href="tel:+12526325020">(252) 632-5020</a></small></span><span class="chip chip--solid">To book</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+            <li data-book="herringbone">
+              <span class="checklist__item">The Herringbone, Sat Nov 14, 7 PM <small><a class="link" href="tel:+12523681068">(252) 368-1068</a> or online, up to 36 hrs ahead</small></span><span class="chip chip--solid">To book</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+            <li data-book="carrozza">
+              <span class="checklist__item">Carrozza, Thu Nov 12, 6:30 PM <small>Call ahead</small></span><span class="chip chip--solid">To book</span><span class="checklist__note"><button type="button" class="btn x-tick" aria-pressed="false">Mark done</button></span>
+            </li>
+          </ul>
+          <p class="fineprint">Ticks live in this page only and reset when it reloads.</p>
+        </section>
+
+        <section class="section" id="touches" data-nav="Extras">
+          <div class="head">
+            <h2>Add a special touch.</h2>
+            <p class="head__sub">Estimated trip total: <span class="x-live" id="touch-total" aria-live="polite">$1,233.74</span>. Book each through the inn unless noted.</p>
+          </div>
+          <ul class="checklist" id="touchlist">
+            <li>
+              <span class="checklist__item">In-room couples massage <small>60 min at the inn, $200 + 20% tip. Saturday's 2:30 PM downtime fits.</small></span><span class="chip">Not added</span><span class="checklist__note"><span class="x-switch-wrap"><button type="button" class="x-switch" role="switch" aria-checked="false" data-price="240" data-key="massage" aria-label="Add in-room couples massage, $240"></button>$240</span></span>
+            </li>
+            <li>
+              <span class="checklist__item">Golden-hour photo session <small>Pierces Point Photography, 20 min, 12 edited photos, $175 + tax. Sat 4:15 PM at the lighthouse.</small></span><span class="chip">Not added</span><span class="checklist__note"><span class="x-switch-wrap"><button type="button" class="x-switch" role="switch" aria-checked="false" data-price="190" data-key="photo" aria-label="Add golden-hour photo session, about $190"></button>≈ $190</span></span>
+            </li>
+            <li>
+              <span class="checklist__item">Picnic basket for two <small>With non-alcoholic drinks; 72 hours' notice. Eat on the waterfront by the lighthouse.</small></span><span class="chip">Not added</span><span class="checklist__note"><span class="x-switch-wrap"><button type="button" class="x-switch" role="switch" aria-checked="false" data-price="85" data-key="picnic" aria-label="Add picnic basket for two, $85"></button>$85</span></span>
+            </li>
+            <li>
+              <span class="checklist__item">Chocolate-covered strawberries <small>Waiting in the room</small></span><span class="chip">Not added</span><span class="checklist__note"><span class="x-switch-wrap"><button type="button" class="x-switch" role="switch" aria-checked="false" data-price="40" data-key="berries" aria-label="Add chocolate-covered strawberries, $40"></button>$40</span></span>
+            </li>
+            <li>
+              <span class="checklist__item">Non-alcoholic bubbly <small>From the inn</small></span><span class="chip">Not added</span><span class="checklist__note"><span class="x-switch-wrap"><button type="button" class="x-switch" role="switch" aria-checked="false" data-price="30" data-key="bubbly" aria-label="Add non-alcoholic bubbly, $30"></button>$30</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="section" id="cost" data-nav="Cost">
+          <div class="head">
+            <h2>About $1,234 for two, before extras.</h2>
+            <p class="head__sub">A conservative estimate, with tax and tip on meals.</p>
+          </div>
+          <div class="breakdown">
+            <dl>
+              <div class="row"><dt>Inn balance <small>Due at the inn</small></dt><dd>$401.74</dd></div>
+              <div class="row"><dt>Tours <small>Trolley $25, Hope $30, Cupola $25, docent tours ~$12</small></dt><dd>$92</dd></div>
+              <div class="row"><dt>Dinners <small>Carrozza ~$110, The Table ~$195 ($150 + tax + 20% tip), The Herringbone ~$140</small></dt><dd>$445</dd></div>
+              <div class="row"><dt>Lunches and brunch <small>~$45 × 3, plus Sunday brunch ~$75</small></dt><dd>$210</dd></div>
+              <div class="row"><dt>Coffee and treats</dt><dd>$40</dd></div>
+              <div class="row"><dt>Gas</dt><dd>$45</dd></div>
+              <div class="row"><dt>Special touches <small id="extras-note">None added yet; all five come to $585</small></dt><dd id="extras-amt">$0</dd></div>
+              <div class="row row--total"><dt>Estimated total</dt><dd id="cost-total">$1,233.74</dd></div>
+            </dl>
+            <p class="fineprint">Core estimate ≈ $1,233.74 including the inn balance. The $401.75 deposit is already paid.</p>
+          </div>
+        </section>
+
+        <section class="section" id="know" data-nav="Good to know">
+          <div class="head">
+            <h2>A few things are closed that weekend.</h2>
+          </div>
+          <div class="cards">
+            <div>
+              <h3>Closed</h3>
+              <ul>
+                <li>Edenton Bay sunset cruises, back April 2027</li>
+                <li>Newbold-White House, season ended Oct 31</li>
+                <li>Huckleberry's Ice Cream, permanently closed</li>
+                <li>309 Bistro, closed March 2026</li>
+                <li>Christmas Candlelight Tour is Dec 11–12, after the trip</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Still to confirm</h3>
+              <p>Hours verified on Google Maps Nov 2, 2026. Tour times for Hope and Historic Edenton still need a phone call.</p>
+            </div>
+            <div>
+              <h3>Sharing</h3>
+              <p>This page is private to Aaron by default and can be made shareable. It shows the inn's name, so hold off until the surprise is out.</p>
+            </div>
+          </div>
+        </section>
+        </section>
+      </main>
+      <footer class="foot">
+        <p>Planned for Aaron. Prices are estimates; ticks and toggles reset when the page reloads.</p>
+        <nav aria-label="Back to sections" data-auto></nav>
+        <a class="badge" href="https://hark.com/" target="_blank" rel="noopener"><span class="hark-mark"></span><span>built by hark</span></a>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        // Day tabs
+        var tabs = Array.prototype.slice.call(document.querySelectorAll('.x-tabs [role="tab"]'));
+        function select(tab, focus) {
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.setAttribute("aria-selected", on ? "true" : "false");
+            t.tabIndex = on ? 0 : -1;
+            document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+          });
+          if (focus) tab.focus();
+        }
+        tabs.forEach(function (t, i) {
+          t.addEventListener("click", function () { select(t); });
+          t.addEventListener("keydown", function (e) {
+            var n = null;
+            if (e.key === "ArrowRight") n = tabs[(i + 1) % tabs.length];
+            if (e.key === "ArrowLeft") n = tabs[(i - 1 + tabs.length) % tabs.length];
+            if (e.key === "Home") n = tabs[0];
+            if (e.key === "End") n = tabs[tabs.length - 1];
+            if (n) { e.preventDefault(); select(n, true); }
+          });
+        });
+
+        // To-book checklist
+        var bookRows = document.querySelectorAll("#booklist > li");
+        var countEl = document.getElementById("book-count");
+        function updateCount() {
+          var done = document.querySelectorAll("#booklist > li.is-done").length;
+          countEl.textContent = done + " of " + bookRows.length + " done";
+        }
+        Array.prototype.forEach.call(bookRows, function (li) {
+          var btn = li.querySelector(".x-tick");
+          var chip = li.querySelector(".chip");
+          var openText = chip.textContent;
+          var key = li.getAttribute("data-book");
+          var stopChip = document.querySelector('.timeline .chip[data-book="' + key + '"]');
+          var stopText = stopChip ? stopChip.textContent : "";
+          btn.addEventListener("click", function () {
+            var done = !li.classList.contains("is-done");
+            li.classList.toggle("is-done", done);
+            btn.setAttribute("aria-pressed", done ? "true" : "false");
+            btn.textContent = done ? "Undo" : "Mark done";
+            chip.textContent = done ? "Done" : openText;
+            chip.classList.toggle("chip--solid", !done);
+            if (stopChip) {
+              stopChip.textContent = done ? "Booked" : stopText;
+              stopChip.classList.toggle("chip--solid", !done);
+            }
+            updateCount();
+          });
+        });
+        updateCount();
+
+        // Special touches and live total
+        var CORE = 1233.74;
+        var money = function (v) {
+          return "$" + v.toLocaleString("en-US", { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 });
+        };
+        var switches = Array.prototype.slice.call(document.querySelectorAll("#touchlist .x-switch"));
+        function updateTotal() {
+          var extras = 0, count = 0;
+          switches.forEach(function (s) {
+            if (s.getAttribute("aria-checked") === "true") { extras += Number(s.getAttribute("data-price")); count++; }
+          });
+          var total = money(CORE + extras);
+          document.getElementById("touch-total").textContent = total;
+          document.getElementById("cost-total").textContent = total;
+          document.getElementById("extras-amt").textContent = money(extras);
+          document.getElementById("extras-note").textContent = count
+            ? count + " of 5 added"
+            : "None added yet; all five come to $585";
+        }
+        switches.forEach(function (s) {
+          var li = s.closest("li");
+          var chip = li.querySelector(".chip");
+          s.addEventListener("click", function () {
+            var on = s.getAttribute("aria-checked") !== "true";
+            s.setAttribute("aria-checked", on ? "true" : "false");
+            chip.textContent = on ? "Added" : "Not added";
+            chip.classList.toggle("chip--solid", on);
+            var stop = document.querySelector('[data-touch-chip="' + s.getAttribute("data-key") + '"]');
+            if (stop) stop.classList.toggle("chip--solid", on);
+            updateTotal();
+          });
+        });
+        updateTotal();
+      })();
+    </script>
+  </body>
+</html>
